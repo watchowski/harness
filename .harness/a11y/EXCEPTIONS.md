@@ -1,6 +1,6 @@
-﻿# Accessibility Exceptions Log
+# Accessibility Exceptions Log
 
-Deviations from \.harness/a11y/A11Y.md\ rules must be documented here before the PR merges. Each exception requires justification, an owner, and a target resolution date.
+Deviations from `.harness/a11y/A11Y.md` rules must be documented here before the PR merges. Each exception requires justification, an owner, and a target resolution date.
 
 ---
 
@@ -8,7 +8,7 @@ Deviations from \.harness/a11y/A11Y.md\ rules must be documented here before the
 
 Copy the template below, fill in all fields, and add it under **Active Exceptions**.
 
-\\\markdown
+```markdown
 ### EXC-<number>: <short description>
 
 | Field | Value |
@@ -19,7 +19,7 @@ Copy the template below, fill in all fields, and add it under **Active Exception
 | **Owner** | [GitHub username or team] |
 | **Date logged** | [YYYY-MM-DD] |
 | **Target resolution** | [YYYY-MM-DD or "permanent — see justification"] |
-\\\
+```
 
 ---
 
