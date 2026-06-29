@@ -13,12 +13,12 @@ Drop it into any project with one command.
 
 **Linux / macOS / WSL:**
 ```bash
-curl -sSL https://raw.githubusercontent.com/<OWNER>/harness/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/watchowski/harness/main/install.sh | bash
 ```
 
 **Windows (PowerShell 5+):**
 ```powershell
-irm https://raw.githubusercontent.com/<OWNER>/harness/main/install.ps1 | iex
+irm https://raw.githubusercontent.com/watchowski/harness/main/install.ps1 | iex
 ```
 
 Run from the root of your project. Git is recommended but not required.

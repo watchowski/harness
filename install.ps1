@@ -1,9 +1,9 @@
 # Claude Code Harness Installer (Windows PowerShell)
-# Usage: irm https://raw.githubusercontent.com/<OWNER>/harness/main/install.ps1 | iex
+# Usage: irm https://raw.githubusercontent.com/watchowski/harness/main/install.ps1 | iex
 
 $ErrorActionPreference = "Stop"
 
-$Owner  = "<OWNER>"
+$Owner  = "watchowski"
 $Repo   = "harness"
 $Branch = "main"
 $Base   = "https://raw.githubusercontent.com/$Owner/$Repo/$Branch"

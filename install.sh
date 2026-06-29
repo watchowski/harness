@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # Claude Code Harness Installer
-# Usage: curl -sSL https://raw.githubusercontent.com/<OWNER>/harness/main/install.sh | bash
+# Usage: curl -sSL https://raw.githubusercontent.com/watchowski/harness/main/install.sh | bash
 
 set -euo pipefail
 
-OWNER="<OWNER>"
+OWNER="watchowski"
 REPO="harness"
 BRANCH="main"
 BASE="https://raw.githubusercontent.com/$OWNER/$REPO/$BRANCH"
