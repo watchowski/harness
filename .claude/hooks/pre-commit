@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+"""
+PreToolUse hook (Bash matcher).
+Fires before every Bash tool call. Checks if the command is a git commit
+touching UI files and, if so, reminds Claude to complete REPORT.md.
+"""
+import sys
+import json
+import subprocess
+
+def main():
+    try:
+        data = json.load(sys.stdin)
+    except Exception:
+        sys.exit(0)
+
+    tool_name = data.get("tool_name", "")
+    command   = data.get("tool_input", {}).get("command", "")
+
+    if tool_name != "Bash" or "git commit" not in command:
+        sys.exit(0)
+
+    try:
+        result = subprocess.run(
+            ["git", "diff", "--cached", "--name-only"],
+            capture_output=True,
+            text=True,
+            timeout=5
+        )
+    except Exception:
+        sys.exit(0)
+
+    ui_exts = (".html", ".tsx", ".jsx", ".vue", ".svelte", ".css", ".scss", ".sass")
+    ui_files = [f for f in result.stdout.splitlines() if f.endswith(ui_exts)]
+
+    if ui_files:
+        print("A11Y REMINDER (Principle 06 — Specialized Review):")
+        print(f"UI files staged: {', '.join(ui_files)}")
+        print("Before committing: complete .harness/a11y/REPORT.md for this change.")
+        print("Rules reference: .harness/a11y/A11Y.md")
+
+    sys.exit(0)
+
+if __name__ == "__main__":
+    main()
