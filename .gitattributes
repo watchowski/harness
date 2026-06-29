@@ -1,0 +1,8 @@
+# Normalize line endings to LF in the repo; checkout as-is on all platforms
+* text=auto eol=lf
+
+# Explicitly mark shell scripts as LF
+*.sh text eol=lf
+
+# PowerShell can work with either, but keep consistent
+*.ps1 text eol=lf
