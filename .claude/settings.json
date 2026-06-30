@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/pre-commit"
+            "command": "python .claude/hooks/pre-commit"
           }
         ]
       }
@@ -16,7 +16,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "python3 .claude/hooks/stop"
+            "command": "python .claude/hooks/stop"
           }
         ]
       }
