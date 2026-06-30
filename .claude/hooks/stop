@@ -12,13 +12,16 @@ def main():
     except Exception:
         pass
 
-    print("INSTITUTIONAL MEMORY CHECK (Principle 05):")
-    print("Did any mistakes, unexpected behaviors, or corrections occur this session?")
-    print("If yes — add an entry to docs/harness/learnings.md:")
-    print("  1. What happened")
-    print("  2. Why it happened")
-    print("  3. How to prevent it in future sessions")
+    message = (
+        "INSTITUTIONAL MEMORY CHECK (Principle 05):\n"
+        "Did any mistakes, unexpected behaviors, or corrections occur this session?\n"
+        "If yes — add an entry to docs/harness/learnings.md:\n"
+        "  1. What happened\n"
+        "  2. Why it happened\n"
+        "  3. How to prevent it in future sessions"
+    )
 
+    print(json.dumps({"systemMessage": message}))
     sys.exit(0)
 
 if __name__ == "__main__":
