@@ -1,0 +1,14 @@
+# Force LF for shell scripts — CRLF breaks POSIX shebangs.
+*.sh    text eol=lf
+*.bash  text eol=lf
+
+# PowerShell handles both, but keep source consistent as LF.
+*.ps1   text eol=lf
+
+# Markdown: let Git normalize per-platform.
+*.md    text
+
+# Explicit binary excludes (none currently, but future-proof).
+*.png   binary
+*.jpg   binary
+*.pdf   binary

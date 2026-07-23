@@ -1,0 +1,16 @@
+# Installer runtime output — never committed
+.harness-v3/
+.harness-v3.bak.*/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Local test sandboxes
+/tmp/
